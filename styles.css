@@ -1,0 +1,169 @@
+/* Reseteo básico */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el footer esté abajo */
+}
+
+/* Header */
+header {
+    background-color: #FFFFFF;
+    color: #333333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    color: #D4AF37;
+    font-size: 36px;
+}
+
+/* Estilo general */
+body {
+    background-color: #F7F7F7;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces */
+a {
+    color: #8AA7FF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5A82FF;
+}
+
+/* Botones */
+button {
+    background-color: #FAD02E;
+    color: #333333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Añadido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px; /* Espaciado general */
+}
+
+button:hover {
+    background-color: #FFD700;
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Card */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Siempre 3 columnas */
+    gap: 20px; /* Espaciado entre tarjetas */
+    justify-items: center; /* Centra las tarjetas dentro del grid */
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s; /* Efecto de elevación */
+    max-width: 300px; /* Controla el tamaño máximo de cada tarjeta */
+    width: 100%; /* Asegura que las tarjetas ocupen el 100% del espacio disponible */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de escalado al pasar el mouse */
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-text, .back-text {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.back-text {
+    color: gray;
+    display: none; /* Por defecto está oculto */
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    header, footer {
+        padding: 15px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* Sigue usando 3 columnas en pantallas medianas */
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Ocupa la mitad del ancho en pantallas medianas */
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px; /* Espaciado entre botones */
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* Mantén 3 columnas en pantallas pequeñas */
+    }
+
+    .card {
+        flex: 1 1 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .card-text, .back-text {
+        font-size: 14px;
+        text-align: center; /* Reduce el tamaño de la fuente */
+    }
+}

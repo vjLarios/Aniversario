@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Primer Aniversario</title>
+</head>
+<body>
+    <header>
+        <h1>Nuestro Primer Añito Juntos</h1>
+        <h2>Abrilita & Josue</h2>
+    </header>
+    <section class="button">
+        <a href="principal.html"><button>Volver a inicio</button><br><br></a>
+    
+    </section>
+    <section class="card-container">
+        <div class="card" onclick="toggleText(this)">
+            <img src="img/foto.jpg" alt="Descripción de la imagen" class="card-image">
+            <p class="card-text">23/09/23 <br> El dia que inició todo</p>
+            <p class="back-text" style="display: none;">Texto en la parte posterior</p>
+        </div>
+
+        <div class="card" onclick="toggleText(this)">
+            <img src="img/foto.jpg" alt="Descripción de la imagen" class="card-image">
+            <p class="card-text">23/09/23 <br> Hoal dia que inició todo</p>
+            <p class="back-text" style="display: none;">Texto en la parte posterior</p>
+        </div>
+
+        <div class="card" onclick="toggleText(this)">
+            <img src="img/foto.jpg" alt="Descripción de la imagen" class="card-image">
+            <p class="card-text">23/09/23 <br> Hoal dia que inició todo</p>
+            <p class="back-text" style="display: none;">Texto en la parte posterior</p>
+        </div>
+
+        <div class="card">
+            <img src="img/foto.jpg" alt="Descripción de la imagen" class="card-image">
+            <p class="card-text">23/09/23 <br> El dia que inició todo</p>
+            <p class="back-text" style="display: none;">Texto en la parte posterior</p>
+        </div>
+        
+    </section>
+    
+    <footer>
+        <p>Holi mochito, esto lo hice con muchisimo amor para ti.
+            Te amo demasiado.<br>23 / 09
+        </p>
+    </footer>
+
+    <!--<script>
+        function toggleText(card) {
+            const backText = card.querySelector('.back-text');
+            const cardText = card.querySelector('.card-text');
+            if (backText.style.display === "none") {
+                backText.style.display = "block";
+                cardText.style.display = "none";
+            } else {
+                backText.style.display = "none";
+                cardText.style.display = "block";
+            }
+        }
+    </script> -->
+</body>
+</html>
