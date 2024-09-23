@@ -18,8 +18,9 @@
                 <i class="fas fa-arrow-left"></i>Volver a Inicio
             </button><br><br>
         </a>
-    
     </section>
+    <p id="mensaje" style="text-align: center; font-size: 24px;">¡Feliz primer añito juntitos mi amor!</p>
+        <button id="cambiarMensaje">Da clic aqui</button>
 
     
     <footer>
@@ -27,5 +28,37 @@
             Te amo demasiado.<br>23 / 09
         </p>
     </footer>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            //Obtener los documentos del DOM
+
+            let mensajeELement = document.getElementById("mensaje")
+            let cambiarMensajeButton = document.getElementById("cambiarMensaje")
+            //Mensajes para cambiar
+            let mensajes = ["Eres mi lugar favorito", "Te amo con todo mi corazoncito", "Siempre te eligire a ti",
+                "Eres mi mejor amiga y el amor de mi vida", "Cada mañana despierto pensando en ti","Mi amor crece por ti cada dia",
+                "Eres la razon que me hace sentir feliz", "Amarte es la mejor decisión que he tomado en mi vida",
+                "Te amo más de lo que las palabras puedenn expresar","Que sean muchos años más juntos" ]
+                let indiceMensaje = 0
+
+function cambiarMensaje(){
+    mensajeELement.textContent = mensajes[indiceMensaje]
+    if(indiceMensaje === 9){
+        indiceMensaje = 0;
+    }else{
+        indiceMensaje++
+    }
+}
+//Agregar evento clic al boton para cambiar mensaje
+cambiarMensajeButton.addEventListener("click",cambiarMensaje)
+
+})
+
+
+    </script>
 </body>
 </html>
