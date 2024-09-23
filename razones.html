@@ -20,12 +20,45 @@
         </a>
     
     </section>
-
+    <p id="mensaje" style="text-align: center; font-size: 24px;">¡Feliz primer añito juntitos mi amor! <br>Estas son solo
+    algunas de las razones por las que te amo</p>
+    <button id="cambiarMensaje">Da clic aqui</button>
     
     <footer>
         <p>Holi mochito, esto lo hice con muchisimo amor para ti.
             Te amo demasiado.<br>23 / 09
         </p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            //Obtener los documentos del DOM
+
+            let mensajeELement = document.getElementById("mensaje")
+            let cambiarMensajeButton = document.getElementById("cambiarMensaje")
+            //Mensajes para cambiar
+            let mensajes = ["Porque siempre estás para mi", "Siempre alegras mis dias tristes", "Porque siempre has sido tú misma",
+                "Porque me aceptas tal como soy", "Te amo porque nos complementamos","Porque me siento seguro a tu lado",
+                "Porque me encanta tu sentido del humor", "Porque me entiendes",
+                "Te amo porque sacas la mejor version de mi","Porque me escuchas","Porque confias en mi",
+                "Porque eres cariñosa conmigo","Porque eres la persona mas bonita","Por esto y mucho más, ¡Te amo!" ]
+                let indiceMensaje = 0
+
+function cambiarMensaje(){
+    mensajeELement.textContent = mensajes[indiceMensaje]
+    if(indiceMensaje === 13){
+        indiceMensaje = 0;
+    }else{
+        indiceMensaje++
+    }
+}
+//Agregar evento clic al boton para cambiar mensaje
+cambiarMensajeButton.addEventListener("click",cambiarMensaje)
+
+})
+
+
+    </script>
 </body>
 </html>
